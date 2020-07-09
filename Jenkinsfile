@@ -50,7 +50,7 @@ spec:
       }
       steps {
         container('tools') {
-          sh "git clone https://$GIT_CREDS_USR:$GIT_CREDS_PSW@github.com/shivaprasadreddy1/argocd-demo-deploy.git"
+          sh "git clone https://$GIT_CREDS_USR:$GIT_CREDS_PSW@github.com/shiva-pivotal/argocd-demo-deploy.git"
           sh "git config --global user.email 'ci@ci.com'"
 
           dir("argocd-demo-deploy") {
