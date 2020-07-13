@@ -61,6 +61,20 @@ spec:
       }
     }
 
+    stage('Deploy QA') {
+      environment {
+        GIT_CREDS = credentials('git')
+      }
+      steps {
+        container('tools') {
+          dir("argocd-demo-deploy") {
+            sh "cd ./qa && kustomize edit set image shivaprasadreddy1/argocd-demo:${env.GIT_COMMIT}"
+            sh "git commit -am 'Publish new version' && git push || echo 'no changes'"
+          }
+        }
+      }
+    }
+
     stage('Deploy to Prod') {
       steps {
         input message:'Approve deployment?'
