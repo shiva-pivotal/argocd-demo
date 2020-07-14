@@ -2,8 +2,8 @@
 
 Repository demonstrates an application deployment using Jenkins and Argo CD.
 
-The application deployment manifests are located in https://github.com/alexmt/argocd-demo-deploy. The
-application has `e2e` and `prod` environment. The deployment process is implemented using using GitOps methodology and automated using Jenkins pipeline.
+The application deployment manifests are located in https://github.com/shiva-pivotal/loan-price-demo-deploy. The
+application has `e2e`,  `Qa` and `prod` environment. The deployment process is implemented using using GitOps methodology and automated using Jenkins pipeline.
 
 ![pipeline](./pipeline.png)
 
