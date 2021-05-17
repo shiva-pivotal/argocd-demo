@@ -12,7 +12,7 @@ if (process.env.ENVIRONMENT === 'prod') {
 const server = http.createServer((_, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello, Whirlpool team and Hello CI/CD demo!\n wrong one');
+  res.end('Hello, Whirlpool team and Hello CI/CD demo!\n right one');
 });
 
 server.listen(port, hostname, () => {
